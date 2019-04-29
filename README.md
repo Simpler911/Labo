@@ -38,3 +38,4 @@ Program.cs faile esantys benchmark rezultatai, skaicius prie ju reiskia kiek gen
   tada branch 2 v0.2 ir t.t.
   Versija v1.0 yra branch Final.
 
+.
