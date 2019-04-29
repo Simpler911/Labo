@@ -18,4 +18,9 @@ Program.cs faile esantys benchmark rezultatai, skaicius prie ju reiskia kiek gen
                 3: 00:00:00.0079783
                 4: 00:00:00.0329085
                 5: 00:00:00.3630080
-      Deque:
+      Sort and Write using Deque:
+                1: 00:00:00.0049869
+                2: 00:00:00.0039890
+                3: 00:00:00.0089765
+                4: 00:00:00.0329398
+                5: 00:00:00.3630294
