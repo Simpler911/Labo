@@ -29,9 +29,6 @@ namespace ND
                 }
                 Console.WriteLine("Iveskite egzamino pazymi: ");
                 Student.Exam = Console.ReadLine();
-                var Calc = new Calculations();
-                Student.Mean = Calc.Mean(Student.Grade);
-                Student.Median = Calc.Median(Student.Grade);
                 Stud.Add(Student);
                 Console.WriteLine("Iveskite studento V ir P: ");
                 Vardas = Console.ReadLine();

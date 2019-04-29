@@ -9,17 +9,35 @@ namespace ND
         private double med1, med2;
         private double counter = 0;
         private double mean = 0;
-        public double Mean(List<string> Grade)
+        private double vid = 0;
+        public double Mean(List<string> Grade, string exam)
         {   
             foreach(var gr in Grade)
             {
                 mean += double.Parse(gr);
                 counter++;
             }
-            return Math.Round(mean / counter, 2);
+            try
+            {
+                vid = (Math.Round(mean / counter, 2) * 0.3) + (double.Parse(exam) * 0.7);
+                return vid;
+            }
+            catch (DivideByZeroException ex)
+            {
+                Console.WriteLine(ex);
+                Console.Write("Dalyba iš nulio negalima.Bandykite dar kartą.");
+                return 0;
+            }
+            catch (InvalidOperationException ex)
+            {
+                Console.WriteLine(ex);
+                Console.Write("Netinkamas skaičius. Bandykite dar kartą.");
+                return 0;
+            }
         }
-        public double Median(List<string> Grade)
+        public double Median(List<string> Grade, string exam)
         {
+            Grade.Add(exam.ToString());
             Grade.Sort();
             try
             {

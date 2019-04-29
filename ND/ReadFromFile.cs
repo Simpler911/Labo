@@ -23,9 +23,6 @@ namespace ND
                     Student.Exam = split[split.Length - 1];
                     for (var i = 2; i < split.Length - 1; i++)
                         Student.Grade.Add(split[i]);
-                    var Calc = new Calculations();
-                    Student.Mean = Calc.Mean(Student.Grade);
-                    Student.Median = Calc.Median(Student.Grade);
                     Stud.Add(Student);
                 }
             }
