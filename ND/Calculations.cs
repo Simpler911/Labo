@@ -5,6 +5,7 @@ namespace ND
 {
     class Calculations
     {
+
         private double med1, med2;
         private double counter = 0;
         private double mean = 0;
