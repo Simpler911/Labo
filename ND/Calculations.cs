@@ -10,7 +10,7 @@ namespace ND
         private double counter = 0;
         private double mean = 0;
         public double Mean(List<string> Grade)
-        {
+        {   
             foreach(var gr in Grade)
             {
                 mean += double.Parse(gr);
@@ -21,15 +21,30 @@ namespace ND
         public double Median(List<string> Grade)
         {
             Grade.Sort();
-            if(Grade.Count % 2 == 0)
+            try
             {
-                med1 = double.Parse(Grade[Grade.Count / 2]);
-                med2 = double.Parse(Grade[((Grade.Count / 2) - 1)]);
-                return (med1+med2)/2;
+                if (Grade.Count % 2 == 0)
+                {
+                    med1 = double.Parse(Grade[Grade.Count / 2]);
+                    med2 = double.Parse(Grade[((Grade.Count / 2) - 1)]);
+                    return (med1 + med2) / 2;
+                }
+                else
+                {
+                    return double.Parse(Grade[Grade.Count / 2]);
+                }
             }
-            else
+            catch (DivideByZeroException ex)
             {
-                return double.Parse(Grade[Grade.Count / 2]);
+                Console.WriteLine(ex);
+                Console.Write("Dalyba iš nulio negalima.Bandykite dar kartą.");
+                return 0;
+            }
+            catch (InvalidOperationException ex)
+            {
+                Console.WriteLine(ex);
+                Console.Write("Netinkamas skaičius. Bandykite dar kartą.");
+                return 0;
             }
         }
     }
