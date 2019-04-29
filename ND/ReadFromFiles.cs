@@ -7,7 +7,9 @@ namespace ND
 {
     class ReadFromFiles
     {
-        public List<Student> Stud = new List<Student>();
+        List<Student> Stud = new List<Student>();
+        //LinkedList<Student> Stud = new LinkedList<Student>();
+        //Queue<Student> Stud = new Queue<Student>();
         public void read()
         {
             try
@@ -27,6 +29,8 @@ namespace ND
                         for (var i = 2; i < split.Length - 1; i++)
                             Student.Grade.Add(split[i]);
                         Stud.Add(Student);
+                        //Stud.AddFirst(Student);
+                        //Stud.Enqueue(Student);
                     }
                     DateTime dt = DateTime.Now;
                     var lazyStudents = Stud.Where(x => x.IsLazy).ToList();
@@ -37,6 +41,7 @@ namespace ND
                     write.write(tt);
                     TimeSpan ts = DateTime.Now - dt;
                     Console.WriteLine(tt + ": " + ts);
+                    Stud.Clear();
                 }
             }
             catch (FileNotFoundException ex) { Console.WriteLine(ex); }
