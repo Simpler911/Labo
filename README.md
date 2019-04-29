@@ -24,3 +24,16 @@ Program.cs faile esantys benchmark rezultatai, skaicius prie ju reiskia kiek gen
                 3: 00:00:00.0089765
                 4: 00:00:00.0329398
                 5: 00:00:00.3630294
+
+Po keliu bandymu su kiekvienu is siu pastebejau, kad jokio didelio skirtumo tarp siu konteineriu nera.
+
+Paskutinej final versijai pasirinkau 2 metoda ir gavau tokius rezultatus:
+1: 00:00:00.0049866
+2: 00:00:00.0039893
+3: 00:00:00.0079786
+4: 00:00:00.0249617
+5: 00:00:00.2722992
+
+Master branch yra versija v0.1
+tada branch 2 v0.2 ir t.t.
+Versija v1.0 yra branch Final.
